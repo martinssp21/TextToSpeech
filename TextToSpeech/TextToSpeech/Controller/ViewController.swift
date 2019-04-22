@@ -12,7 +12,8 @@ import AVFoundation
 class ViewController: UIViewController{
     @IBOutlet private weak var textLabelTextFont: UITextView!
     @IBOutlet weak var sliderSpeedSpeech: UISlider!
-    @IBOutlet weak var buttonReadStop: UIButton!
+    @IBOutlet weak var buttonRead: RoundButton!
+    @IBOutlet weak var buttonStop: RoundButton!
     @IBOutlet weak var pickerViewLanguage: UIPickerView!
     
     var languageSelected = String()
@@ -25,7 +26,7 @@ class ViewController: UIViewController{
         self.pickerViewLanguage.dataSource = self
     }
 
-    private func ReadToSpeech(text: String, speed : Float, language: String){
+    private func ReadToSpeech(text: String = "Nada para ler", speed : Float = 2.0, language: String = "pt_BR"){
         let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string: text)
 
         speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / speed
@@ -40,11 +41,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func buttonTextToSpeech(_ sender: Any) {
-        if let speed =  self.sliderSpeedSpeech?.value {
-            if let text = self.textLabelTextFont?.text {
-                self.ReadToSpeech(text: text, speed: speed, language: languageSelected)
-            }
-        }
+        self.ReadToSpeech(text: self.textLabelTextFont!.text, speed: self.sliderSpeedSpeech!.value , language: languageSelected)
     }
 }
 
@@ -67,3 +64,6 @@ extension ViewController: UIPickerViewDataSource{
         return dictionaryLanguage.count
     }
 }
+
+
+

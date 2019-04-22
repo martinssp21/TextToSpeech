@@ -18,63 +18,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jab-BP-G5z">
-                                <rect key="frame" x="8" y="72" width="359" height="245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jab-BP-G5z">
+                                <rect key="frame" x="8" y="73" width="359" height="238"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAL-oz-dSB">
-                                <rect key="frame" x="16" y="585" width="148" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAL-oz-dSB" customClass="RoundButton" customModule="TextToSpeech" customModuleProvider="target">
+                                <rect key="frame" x="16" y="611" width="103" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Read">
-                                    <color key="titleColor" red="0.46339625629999998" green="0.14726696210000001" blue="0.18642172479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonTextToSpeech:" destination="Sjl-Uc-Shm" eventType="touchUpInside" id="D1Q-ht-bqI"/>
+                                    <action selector="buttonTextToSpeech:" destination="Sjl-Uc-Shm" eventType="touchUpInside" id="kER-tJ-QmN"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="IP0-yU-t2u">
-                                <rect key="frame" x="187" y="337" width="174" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="IP0-yU-t2u">
+                                <rect key="frame" x="179" y="331" width="190" height="31"/>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidade de leitura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozn-wE-iC0">
-                                <rect key="frame" x="16" y="341" width="165" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Velocidade de leitura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozn-wE-iC0">
+                                <rect key="frame" x="8" y="335" width="165" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entre com o texto a ser lido:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMx-zl-e9F">
-                                <rect key="frame" x="16" y="43" width="213" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entre com o texto a ser lido:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMx-zl-e9F">
+                                <rect key="frame" x="16" y="36" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-wU-FdE">
-                                <rect key="frame" x="0.0" y="374" width="375" height="188"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSp-wU-FdE">
+                                <rect key="frame" x="0.0" y="369" width="375" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEm-zz-jEX">
-                                <rect key="frame" x="211" y="585" width="148" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEm-zz-jEX" customClass="RoundButton" customModule="TextToSpeech" customModuleProvider="target">
+                                <rect key="frame" x="239" y="611" width="120" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="e0b-Mx-UjL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Stop">
-                                    <color key="titleColor" red="0.46339625629999998" green="0.14726696210000001" blue="0.18642172479999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonStopRead:" destination="Sjl-Uc-Shm" eventType="touchUpInside" id="wp5-FL-xyl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nd7-mw-8B2" firstAttribute="trailing" secondItem="UEm-zz-jEX" secondAttribute="trailing" constant="16" id="3Iy-qt-Gdi"/>
+                            <constraint firstItem="Ozn-wE-iC0" firstAttribute="leading" secondItem="Nd7-mw-8B2" secondAttribute="leading" constant="8" id="5A0-n6-EGl"/>
+                            <constraint firstItem="UAL-oz-dSB" firstAttribute="leading" secondItem="Nd7-mw-8B2" secondAttribute="leading" constant="16" id="8PV-ch-N23"/>
+                            <constraint firstItem="jab-BP-G5z" firstAttribute="top" secondItem="OMx-zl-e9F" secondAttribute="bottom" constant="16" id="8r7-sc-2kc"/>
+                            <constraint firstItem="OMx-zl-e9F" firstAttribute="top" secondItem="Nd7-mw-8B2" secondAttribute="top" constant="16" id="AZX-ha-ZOE"/>
+                            <constraint firstItem="Nd7-mw-8B2" firstAttribute="trailing" secondItem="OMx-zl-e9F" secondAttribute="trailing" constant="16" id="CT5-Wo-F4e"/>
+                            <constraint firstItem="UEm-zz-jEX" firstAttribute="leading" secondItem="UAL-oz-dSB" secondAttribute="trailing" constant="120" id="DNm-Im-veb"/>
+                            <constraint firstItem="Nd7-mw-8B2" firstAttribute="trailing" secondItem="jab-BP-G5z" secondAttribute="trailing" constant="8" id="ErR-HM-K08"/>
+                            <constraint firstItem="Nd7-mw-8B2" firstAttribute="bottom" secondItem="UEm-zz-jEX" secondAttribute="bottom" constant="24" id="HxY-zr-UsU"/>
+                            <constraint firstItem="xSp-wU-FdE" firstAttribute="trailing" secondItem="Nd7-mw-8B2" secondAttribute="trailing" id="Pb1-4Y-8S7"/>
+                            <constraint firstItem="IP0-yU-t2u" firstAttribute="top" secondItem="jab-BP-G5z" secondAttribute="bottom" constant="20" id="SMr-BY-F2c"/>
+                            <constraint firstItem="Nd7-mw-8B2" firstAttribute="trailing" secondItem="IP0-yU-t2u" secondAttribute="trailing" constant="8" id="Wkh-te-w6a"/>
+                            <constraint firstItem="Ozn-wE-iC0" firstAttribute="top" secondItem="jab-BP-G5z" secondAttribute="bottom" constant="24" id="aep-wa-V4C"/>
+                            <constraint firstItem="OMx-zl-e9F" firstAttribute="leading" secondItem="Nd7-mw-8B2" secondAttribute="leading" constant="16" id="dUz-4d-7je"/>
+                            <constraint firstItem="xSp-wU-FdE" firstAttribute="leading" secondItem="Nd7-mw-8B2" secondAttribute="leading" id="ddk-lu-gdn"/>
+                            <constraint firstItem="UEm-zz-jEX" firstAttribute="top" secondItem="xSp-wU-FdE" secondAttribute="bottom" constant="26" id="fXG-zp-G3N"/>
+                            <constraint firstItem="jab-BP-G5z" firstAttribute="leading" secondItem="Nd7-mw-8B2" secondAttribute="leading" constant="8" id="i5v-3r-aqj"/>
+                            <constraint firstItem="UAL-oz-dSB" firstAttribute="top" secondItem="xSp-wU-FdE" secondAttribute="bottom" constant="26" id="rPq-6Y-gvo"/>
+                            <constraint firstItem="xSp-wU-FdE" firstAttribute="top" secondItem="IP0-yU-t2u" secondAttribute="bottom" constant="8" id="u2h-Rt-KCC"/>
+                            <constraint firstItem="Nd7-mw-8B2" firstAttribute="bottom" secondItem="UAL-oz-dSB" secondAttribute="bottom" constant="24" id="wMi-CQ-Ia5"/>
+                            <constraint firstItem="IP0-yU-t2u" firstAttribute="leading" secondItem="Ozn-wE-iC0" secondAttribute="trailing" constant="8" id="zj6-wd-cke"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Nd7-mw-8B2"/>
                     </view>
                     <connections>
-                        <outlet property="buttonReadStop" destination="UAL-oz-dSB" id="gjD-zr-8n9"/>
+                        <outlet property="buttonRead" destination="UAL-oz-dSB" id="ps2-mD-Yfu"/>
+                        <outlet property="buttonStop" destination="UEm-zz-jEX" id="Mks-1b-e4z"/>
                         <outlet property="pickerViewLanguage" destination="xSp-wU-FdE" id="PVK-1t-NjO"/>
                         <outlet property="sliderSpeedSpeech" destination="IP0-yU-t2u" id="Yjl-yb-jqm"/>
                         <outlet property="textLabelTextFont" destination="jab-BP-G5z" id="mAn-1O-0Ig"/>
