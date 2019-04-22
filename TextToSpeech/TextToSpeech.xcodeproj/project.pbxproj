@@ -12,6 +12,8 @@
 		A58FE972226E213C00E5D491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58FE970226E213C00E5D491 /* LaunchScreen.storyboard */; };
 		A58FE97D226E217A00E5D491 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58FE97C226E217A00E5D491 /* Main.storyboard */; };
 		A58FE97F226E218600E5D491 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58FE97E226E218600E5D491 /* ViewController.swift */; };
+		A58FE982226E222400E5D491 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58FE981226E222400E5D491 /* AVFoundation.framework */; };
+		A58FE984226E391B00E5D491 /* DictinaryLanguages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58FE983226E391B00E5D491 /* DictinaryLanguages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A58FE973226E213C00E5D491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58FE97C226E217A00E5D491 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A58FE97E226E218600E5D491 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A58FE981226E222400E5D491 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A58FE983226E391B00E5D491 /* DictinaryLanguages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictinaryLanguages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58FE982226E222400E5D491 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				A58FE966226E213900E5D491 /* TextToSpeech */,
 				A58FE965226E213900E5D491 /* Products */,
+				A58FE980226E222400E5D491 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,8 +90,17 @@
 		A58FE97B226E216F00E5D491 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A58FE983226E391B00E5D491 /* DictinaryLanguages.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A58FE980226E222400E5D491 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A58FE981226E222400E5D491 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58FE97F226E218600E5D491 /* ViewController.swift in Sources */,
+				A58FE984226E391B00E5D491 /* DictinaryLanguages.swift in Sources */,
 				A58FE968226E213900E5D491 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
